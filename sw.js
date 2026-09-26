@@ -61,7 +61,9 @@ async function trimAssets(cache) {
 
 async function navigation(request) {
   try {
-    const res = await fetch(request);
+    // Immer beim Server nachfragen (304 ist billig): GitHub Pages erlaubt
+    // Browsern sonst 10 Minuten alte Seiten — neue Versionen kamen spaet an
+    const res = await fetch(request.url, { cache: 'no-cache', credentials: 'same-origin' });
     const html = (res.headers.get('Content-Type') || '').includes('text/html');
     if (res.ok || (res.status === 404 && html)) {
       const shell = await asShell(res);
