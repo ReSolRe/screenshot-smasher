@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!--
+    Open-Graph-Bild-Platzhalter. 1200x630 ist die Standard-Groesse fuer
+    OG und Twitter Card summary_large_image.
+
+    Bewusst text-frei: der Produktname darf in statischen Assets nicht
+    hartkodiert werden (Branding-Disziplin aus CLAUDE.md / pre-commit-
+    Hook). Produktname, Tagline und Domain werden stattdessen ueber die
+    OG-Meta-Tags in index.html transportiert, die crawler-seitig vor dem
+    Bild ausgewertet werden. Das Bild liefert nur die visuelle Signatur.
+
+    Vor Launch durch ein echtes Rendering (PNG 1200x630) ersetzen —
+    dokumentiert als Phase 6A.5. Nicht alle Crawler verarbeiten SVG,
+    deshalb spaeter PNG.
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.3" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#ff3333" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ff3333" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base fill + radial glow -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Horizon lines (subtle grid framing) -->
+  <g stroke="#1e242d" stroke-width="2" fill="none">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="510" x2="1200" y2="510"/>
+  </g>
+
+  <!--
+    Zentrales Bruch-Signet: eine stilisierte Impact-Szene aus Bruchkanten,
+    die die Zerstoerungsaesthetik des Produkts abstrakt transportiert.
+    Rein geometrisch, kein Text, kein Markenname.
+  -->
+  <g transform="translate(600 315)">
+    <!-- impact ring -->
+    <circle r="180" fill="none" stroke="#ff3333" stroke-width="4" stroke-opacity="0.65"/>
+    <circle r="140" fill="none" stroke="#ff3333" stroke-width="3" stroke-opacity="0.35"/>
+    <circle r="90"  fill="none" stroke="#ff3333" stroke-width="2" stroke-opacity="0.2"/>
+
+    <!-- radial cracks -->
+    <g stroke="#ff3333" stroke-width="5" stroke-linecap="round">
+      <line x1="0" y1="0" x2="220"  y2="-40"/>
+      <line x1="0" y1="0" x2="180"  y2="110"/>
+      <line x1="0" y1="0" x2="-40"  y2="220"/>
+      <line x1="0" y1="0" x2="-210" y2="60"/>
+      <line x1="0" y1="0" x2="-150" y2="-160"/>
+      <line x1="0" y1="0" x2="60"   y2="-220"/>
+    </g>
+
+    <!-- impact core -->
+    <circle r="14" fill="#ff3333"/>
+    <circle r="6"  fill="#fff" fill-opacity="0.85"/>
+  </g>
+
+  <!-- Bottom marker bar (purely decorative, no text) -->
+  <rect x="80" y="568" width="120" height="4" fill="#ff3333"/>
+</svg>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      RENAME-RUNBOOK Stelle 5 (Web-Version HTML-Template).
+      Der Produktname wird hier bewusst hartcodiert, weil index.html ein
+      statisches Template ist, das nichts aus branding.js importieren kann.
+      Der .githooks/pre-commit Hook whitelistet index.html explizit.
+      Bei einer Namensaenderung sind alle unten markierten @RENAME-Stellen
+      synchron zu packages/core/src/config/branding.js zu aktualisieren.
+    -->
+
+    <!-- Basis-SEO -->
+    <title>Screenshot Smasher — Zerstöre frustrierende Software-Oberflächen</title><!-- @RENAME -->
+    <meta
+      name="description"
+      content="Lade einen Screenshot hoch, wähle eine von dreißig Waffen und zerlege die UI in Fragmente. Komplett im Browser. Kein Server-Upload."
+    />
+    <meta name="author" content="Screenshot Smasher" /><!-- @RENAME -->
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://resolre.github.io/screenshot-smasher/" /><!-- @RENAME -->
+
+    <!--
+      Owner-Wunsch: in Suchmaschinen moeglichst nicht auffindbar. Gilt fuer
+      alle Routen (SPA: jede Seite wird ueber index.html bzw. 404.html
+      ausgeliefert). Keine robots.txt-Sperre — die wuerde Crawler daran
+      hindern, dieses noindex ueberhaupt zu lesen.
+    -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/screenshot-smasher/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Screenshot Smasher" /><!-- @RENAME -->
+    <meta property="og:title" content="Screenshot Smasher — Zerstöre frustrierende Software-Oberflächen" /><!-- @RENAME -->
+    <meta
+      property="og:description"
+      content="Screenshot hochladen, dreißig Waffen, volle VFX-Pipeline. Client-seitig im Browser. Der moderne Nachfolger des Desktop-Destroyer-Klassikers."
+    />
+    <meta property="og:url" content="https://resolre.github.io/screenshot-smasher/" /><!-- @RENAME -->
+    <meta property="og:image" content="https://resolre.github.io/screenshot-smasher/og-image.svg" /><!-- @RENAME -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="de_DE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Screenshot Smasher — Zerstöre frustrierende Software-Oberflächen" /><!-- @RENAME -->
+    <meta
+      name="twitter:description"
+      content="Screenshot hochladen, dreißig Waffen, volle VFX-Pipeline. Client-seitig im Browser."
+    />
+    <meta name="twitter:image" content="https://resolre.github.io/screenshot-smasher/og-image.svg" /><!-- @RENAME -->
+
+    <style>
+      html, body { margin: 0; padding: 0; background: #0d1117; color: #e6e6e8; font-family: system-ui, -apple-system, sans-serif; }
+      html, body { overflow-x: hidden; }
+      * { box-sizing: border-box; }
+      #root { width: 100vw; min-height: 100vh; }
+      kbd { font-family: ui-monospace, Consolas, monospace; }
+    </style>
+    <script type="module" crossorigin src="/screenshot-smasher/assets/index-Dnv0B9aR.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
